@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<body>
+<head>
+
+<style>
+.triangle-border {
+  position:relative;
+  padding:15px;
+  margin:1em 0 3em;
+  border:5px solid #5a8f00;
+  color:#333;
+  background:#fff;
+  /* css3 */
+  -webkit-border-radius:10px;
+  -moz-border-radius:10px;
+  border-radius:10px;
+}
+
+/* Variant : for left positioned triangle
+------------------------------------------ */
+
+.triangle-border.left {
+  margin-left:30px;
+}
+
+/* Variant : for right positioned triangle
+------------------------------------------ */
+
+.triangle-border.right {
+  margin-right:30px;
+}
+</style>
+
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+</head>
+JavaScript Exercises. Learn js in a day through examples. You can refer:<a href="http://www.w3schools.com/js/default.asp"> W3 Schools</a>  
+<h2>1. Show Time</h2>
+<button type="button" onclick="document.getElementById('showTime').innerHTML = Date()" >Show Time</button>
+<p id="showTime"></p>
+<script>
+    document.getElementById('showTime').style.fontSize = "20px";
+</script>
+<h2>2. Click To Flip Image</h2>
+<img id="bulb" src="http://www.w3schools.com/js/pic_bulbon.gif" onclick="changeBulbImage()">
+<script>
+function changeBulbImage(){
+var bulbTag = document.getElementById('bulb');
+  if(bulbTag.src.match("bulbon")){
+     bulbTag.src = "http://www.w3schools.com/js/pic_bulboff.gif";
+  }else {
+     bulbTag.src = "http://www.w3schools.com/js/pic_bulbon.gif";
+  }  
+}
+</script>
+<h2>3. Check Input</h2>
+<p>Enter a Canadian province</p>
+<form onsubmit="return false">
+    <input type="text" name="textInput" id="intxt">
+    <input type="submit" name="submitButton" onclick="checkText()">
+</form>
+<script>
+    function checkText() {
+        var input = document.getElementById("intxt").value;
+        var states = ["ON","QC","SK","AB"];
+        var inSt = states.indexOf(input);
+        console.log("Input:", input);
+
+          if ( inSt < 0)
+          {
+              console.log("Input:", inSt);
+              alert("Please enter a valid province name.");
+          }  
+    }
+</script>
+
+<h2>4. Function To Celcius</h2>
+<p>Enter a temp in fahrenheit</p>
+<form onsubmit="return false">
+    <input type="text" name="fhit" id="inNum">
+    <input type="submit" name="submitNum" onclick="convert2Cel()">
+</form>
+<p id="cel"></p>
+<script>
+    function convert2Cel() {
+        var fahrenheit = document.getElementById("inNum").value;
+        console.log("Input:", fahrenheit);
+        document.getElementById("cel").innerHTML = ((5/9) * (fahrenheit-32));
+    }
+</script>
+
+<h2>5. js Objects/Array</h2>
+<p id="obj"></p>
+<script>
+    var numStore = {
+        //Array
+        prime: [1,2,3,5,7,11,13],
+        odd: [1,3,5,7,9,11],
+        oddAndPrime: function(index){
+            return this.prime[index]+this.odd[index];
+        }
+    };
+    document.getElementById("obj").innerHTML = "Sum of 5th odd: " + numStore.odd[5] + " and 5th prime: " + numStore.prime[5] + " is " + numStore.oddAndPrime(5);
+</script>
+
+<h2>6. <span id="jstxt" onmouseover="changeColour()">js</span> Evenets</h2>
+<p id="jstxt2" onmouseover="changeColour()">Mouse over to change colour</p>
+<script>
+FONT_UNIT = 'px'
+MIN_FONT_SIZE = 15
+MAX_FONT_SIZE = 30
+
+    function getFontSize () {
+	    return ((Math.round (Math.random() * 100) / (MAX_FONT_SIZE - MIN_FONT_SIZE)) + MIN_FONT_SIZE) + FONT_UNIT
+    }
+
+    function changeColour(){
+        var spantxt = document.getElementById("jstxt");
+        var spantxt2 = document.getElementById("jstxt2");
+        spantxt.style.color="#"+((1<<24)*Math.random()|0).toString(16);
+        spantxt.style.fontSize = getFontSize ();
+        spantxt2.style.color="#"+((1<<24)*Math.random()|0).toString(16);
+        spantxt2.style.fontSize = getFontSize ();
+    }
+</script>
+
+<h2>7. String </h2>
+
+<p id="jst" onmouseover="changeString()">IBM DB2 is the most powerful database manager</p>
+<script>
+    function changeString(){
+       var jst = document.getElementById("jst").innerHTML;
+       //console.log(jst);
+       var jstNew = "";
+       for ( i=0; i <= jst.length; i++){
+           jstNew = jstNew.concat(jst.substr(jst.length - i, 1));
+       }
+       console.log(jstNew);
+       document.getElementById("jst").innerHTML =  jstNew;
+    }
+</script>
+
+<h2>8. Show Day</h2>
+<button type="button" onclick="getDay()" >Show Day</button>
+<p id="showDay"></p>
+<script>
+    function getDay(){
+        var day = new Date();
+        document.getElementById('showDay').innerHTML = day.getFullYear();
+        window.scrollBy(0, 100);
+    }
+</script>
+<h2>9. Add HTML</h2>
+
+<p id="chatanch"></p>
+
+<form onsubmit="return false">
+    <input type="text" name="textInput" id="chatline">
+    <input type="submit" name="submitButton" onclick="sendChat()">
+</form>
+<script>
+    function sendChat(){
+        window.scrollBy(0, 300);
+        var anch = document.getElementById("chatanch");
+        var node = document.createElement("p");
+        var chatText = document.getElementById("chatline").value;
+        var textnode = document.createTextNode(chatText);
+        node.appendChild(textnode);
+        node.setAttribute("class", "triangle-border right");
+        anch.appendChild(node); 
+    }   
+</script>
+<h2>10. Try/Catch</h2>
+<p id="tryc"></p>
+<p id="tryc2"></p>
+<script>
+try {    
+    showalert("call some function!");   
+}
+catch(err) {
+    document.getElementById("tryc").innerHTML = err.message;
+ }
+</script>
+
+<button id="msg">Change Me</button>
+
+<script>
+var msgh = document.getElementById("msg");
+msgh.addEventListener("click", printMessage);
+
+function printMessage(){
+    var num = Math.round(Math.random() * 10);
+    document.getElementById("msg").innerHTML = "NiTi " + num;
+}    
+</script>
+
+</br></br>
+by Ragu Kattinakere for his learning.
+</br>
+inspired by #ibmhackademy
+</body>
+</html>
