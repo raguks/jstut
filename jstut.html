@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
-<body>
 <head>
-
+<!--Ignore CSS head stright to the body if you only wish to look at javascript-->
 <style>
 .triangle-border {
   position:relative;
@@ -30,18 +29,72 @@
 .triangle-border.right {
   margin-right:30px;
 }
+
+html, body, .container
+{
+    height: 100%; 
+    min-height: 100%;
+}
+
+.first {
+    float: left;
+    width: 20%;
+    height: 30%;
+    background-color: pink;
+}
+
+.second{
+    float: left;
+    width: 20%;
+    height: 70%;
+    background-color: lightgreen;
+}
+
+
+.third{
+    float: right;
+    width: 80%;
+    height: 80%;
+    background-color: dodgerblue;
+}
+
+.fourth {
+    float: right;
+    width: 40%;
+    height: 20%;
+    background-color: #DDDDDD;
+}
+
+.last{
+    float: right;
+    width: 40%;
+    height: 20%;
+    background-color: gold;
+}
+
 </style>
+<!--Ignore CSS above head stright to the body below if you only wish to look at javascript-->
+
+<div class="container">
+<div class="third">
 
 <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
 <meta content="utf-8" http-equiv="encoding">
 </head>
+
+<body>
+<font face="arial,helvetica" size="2">    
 JavaScript Exercises. Learn js in a day through examples. You can refer:<a href="http://www.w3schools.com/js/default.asp"> W3 Schools</a>  
+
+<!--First exercise starts here-->
 <h2>1. Show Time</h2>
 <button type="button" onclick="document.getElementById('showTime').innerHTML = Date()" >Show Time</button>
 <p id="showTime"></p>
 <script>
     document.getElementById('showTime').style.fontSize = "20px";
 </script>
+
+<!--Second exercise starts here-->
 <h2>2. Click To Flip Image</h2>
 <img id="bulb" src="http://www.w3schools.com/js/pic_bulbon.gif" onclick="changeBulbImage()">
 <script>
@@ -54,6 +107,8 @@ var bulbTag = document.getElementById('bulb');
   }  
 }
 </script>
+
+<!--Third exercise starts here-->
 <h2>3. Check Input</h2>
 <p>Enter a Canadian province</p>
 <form onsubmit="return false">
@@ -75,6 +130,7 @@ var bulbTag = document.getElementById('bulb');
     }
 </script>
 
+<!--Fourth exercise starts here-->
 <h2>4. Function To Celcius</h2>
 <p>Enter a temp in fahrenheit</p>
 <form onsubmit="return false">
@@ -90,6 +146,7 @@ var bulbTag = document.getElementById('bulb');
     }
 </script>
 
+<!--Fifth exercise starts here-->
 <h2>5. js Objects/Array</h2>
 <p id="obj"></p>
 <script>
@@ -104,6 +161,7 @@ var bulbTag = document.getElementById('bulb');
     document.getElementById("obj").innerHTML = "Sum of 5th odd: " + numStore.odd[5] + " and 5th prime: " + numStore.prime[5] + " is " + numStore.oddAndPrime(5);
 </script>
 
+<!--Sixth exercise starts here-->
 <h2>6. <span id="jstxt" onmouseover="changeColour()">js</span> Evenets</h2>
 <p id="jstxt2" onmouseover="changeColour()">Mouse over to change colour</p>
 <script>
@@ -124,14 +182,16 @@ MAX_FONT_SIZE = 30
         spantxt2.style.fontSize = getFontSize ();
     }
 </script>
+</div>
+<div class="first">
 
+<!--Seventh exercise starts here-->    
 <h2>7. String </h2>
 
 <p id="jst" onmouseover="changeString()">IBM DB2 is the most powerful database manager</p>
 <script>
     function changeString(){
        var jst = document.getElementById("jst").innerHTML;
-       //console.log(jst);
        var jstNew = "";
        for ( i=0; i <= jst.length; i++){
            jstNew = jstNew.concat(jst.substr(jst.length - i, 1));
@@ -141,8 +201,9 @@ MAX_FONT_SIZE = 30
     }
 </script>
 
-<h2>8. Show Day</h2>
-<button type="button" onclick="getDay()" >Show Day</button>
+<!--Eight exercise starts here-->
+<h2>8. Show Year</h2>
+<button type="button" onclick="getDay()" >Show Year</button>
 <p id="showDay"></p>
 <script>
     function getDay(){
@@ -151,6 +212,11 @@ MAX_FONT_SIZE = 30
         window.scrollBy(0, 100);
     }
 </script>
+
+</div>
+<div class="second">
+
+<!--Nineth exercise starts here-->    
 <h2>9. Add HTML</h2>
 
 <p id="chatanch"></p>
@@ -171,6 +237,10 @@ MAX_FONT_SIZE = 30
         anch.appendChild(node); 
     }   
 </script>
+
+</div><div class="fourth">
+
+<!--Tenth exercise starts here-->
 <h2>10. Try/Catch</h2>
 <p id="tryc"></p>
 <p id="tryc2"></p>
@@ -195,9 +265,14 @@ function printMessage(){
 }    
 </script>
 
-</br></br>
+</div><div class="last">
+
+</br>
 by Ragu Kattinakere for his learning.
 </br>
-inspired by #ibmhackademy
+inspired by #ibmhackademy. css by http://jsfiddle.net/PpdzE
+</font>
+</div>
+</div>
 </body>
 </html>
