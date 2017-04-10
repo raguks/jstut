@@ -7,5 +7,5 @@ If you are familiar with Java and C, JavaScript is very easy to learn. All you n
 4. Make a html file and start writing your own until you can make something similar work.
 5. Do not move to the next exercise until you understand what is happening.
 6. Refer to W3 Schools link or search over the Internet if you need help.
-
+(http://raguks.github.io/jstut/jstut.png)
 Javascript is not Java. May no one say: you dont know Javascript? Enjoy.
