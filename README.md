@@ -1,5 +1,5 @@
 # jstut
-If you are familiar with Java and C, JavaScript is very easy to learn. All you need to learn is, how to deal with html document. Mostly.
+If you are familiar with Java and C, JavaScript is very easy to learn. All you need to learn is, how to deal with html document. Mostly. This is a very basic inriduction to get you started. This will remain basic in order to keep it simple for those starting new.
 
 1. Open the file [jstut.html](https://github.com/raguks/jstut/blob/master/jstut.html) in a browser.
 2. Try exercise one by one
