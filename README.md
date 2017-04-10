@@ -1,7 +1,7 @@
 # jstut
 If you are familiar with Java and C, JavaScript is very easy to learn. All you need to learn is, how to deal with html document. Mostly. This is a very basic inriduction to get you started. This will remain basic in order to keep it simple for those starting new.
 
-<img src="jstut.png" alt="JSTut" style="width: 200px;"/>
+<img src="jstut.png" alt="JSTut" style="width: 100px;"/>
 
 1. Open the source file [jstut.html](https://github.com/raguks/jstut/blob/master/jstut.html) in a browser.
 2. Try exercise one by one -- you can see the [results here:](http://raguks.github.io/jstut/jstut.html)
