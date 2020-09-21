@@ -1,5 +1,5 @@
 # jstut
-Welcome to the most simple javascript tutorial on earth! Yes if you know html already that is. Here we go! If you are familiar with Java and C, JavaScript is very easy to learn. All you need to learn is, how to deal with html document. Mostly. This is a very basic inriduction to get you started. This will remain basic in order to keep it simple for those starting new.
+Welcome to the most simple javascript tutorial on earth! Yes if you know html already that is. Here we go! If you are familiar with Java and C, JavaScript is very easy to learn. All you need to learn is, how to deal with a html document. Mostly. This is a very basic introduction to get you started. This will remain basic in order to keep it simple for those starting new.
 
 <img src="jstut.png" alt="JSTut" width="300px" align="center"/>
 
